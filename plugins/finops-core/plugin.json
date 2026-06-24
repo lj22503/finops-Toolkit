@@ -1,0 +1,14 @@
+---
+name: finops-skill-factory
+description: 公募基金互金电商运营技能工厂——从策略到执行到监控的全链路运营支持
+skills:
+  - finops-community-monitor
+  - finops-copywriting
+commands:
+  - community-monitor
+  - campaign-plan
+  - write-copy
+gates:
+  - gate-compliance
+  - gate-data
+  - gate-validation
