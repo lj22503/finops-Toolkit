@@ -1,0 +1,42 @@
+name: finops-full-cycle
+entry_skill: router
+
+stages:
+  - name: route-intent
+    skill: router
+    output_var: routed-skill
+
+  - name: load-atoms
+    skill: ops-line
+    depends: [route-intent]
+    gate:
+      requires: [routed-skill]
+      blocks_if: skill-not-identified
+
+  - name: ops-execution
+    skill: ops-line
+    depends: [load-atoms]
+    output_var: ops-result
+
+  - name: compliance-check
+    skill: compliance-line
+    depends: [ops-execution]
+    input:
+      content: stage://ops-execution/ops-result
+    output_var: compliance-result
+
+  - name: data-analysis
+    skill: data-line
+    depends: [compliance-check]
+    input:
+      context: stage://ops-execution/ops-result
+    output_var: data-result
+
+  - name: final-review
+    skill: data-line
+    depends: [data-analysis]
+    input:
+      ops: stage://ops-execution/ops-result
+      compliance: stage://compliance-check/compliance-result
+      data: stage://data-analysis/data-result
+    output_var: final-result

@@ -1,0 +1,32 @@
+negation_signals:
+  chinese:
+    - "不对"
+    - "不是"
+    - "换个"
+    - "重来"
+    - "不是这个意思"
+    - "不行"
+    - "重来"
+  english:
+    - "no"
+    - "not that"
+    - "wrong"
+    - "different"
+
+capture:
+  when: negation_signal_detected
+  extract:
+    - user_expression
+    - routed_skill
+    - previous_output
+  store: data/feedback-log.jsonl
+
+update_rules:
+  batch_interval: daily
+  frequency_threshold: 3
+  auto_update:
+    trigger_mappings: false
+  review_queue:
+    enabled: true
+    min_frequency: 3
+    max_queue_size: 50

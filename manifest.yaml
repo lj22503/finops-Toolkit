@@ -1,0 +1,52 @@
+# FinOps Toolkit Skill Registry
+
+skills:
+  - name: ops-line
+    triggers:
+      - "写文案"
+      - "做内容"
+      - "设计活动"
+      - "用户增长"
+      - "活动策划"
+      - "启动运营周期"
+      - "新季度规划"
+    description: "运营线 - 全栈触达：内容+活动+渠道"
+    confidence_threshold: 0.7
+    examples:
+      - "帮我写一篇基金产品的推广文案"
+      - "设计一个拉新活动"
+
+  - name: data-line
+    triggers:
+      - "分析数据"
+      - "复盘效果"
+      - "监控舆情"
+      - "社区动态"
+      - "数据报告"
+    description: "数据线 - 大脑：分析+策略+验证"
+    confidence_threshold: 0.7
+    examples:
+      - "分析一下本月的用户增长数据"
+      - "监控一下社区舆情"
+
+  - name: compliance-line
+    triggers:
+      - "检查合规"
+      - "这个能发吗"
+      - "合规审查"
+      - "审核内容"
+    description: "合规线 - 门禁：审查+一票否决"
+    confidence_threshold: 0.7
+    examples:
+      - "检查这个文案能不能发"
+      - "审核一下活动方案"
+
+  - name: full-cycle
+    triggers:
+      - "启动运营周期"
+      - "新季度规划"
+      - "完整流程"
+    description: "完整运营周期 - 6步串行：燃冰定方向→数据线分析→运营线执行→合规线审查→数据线复盘→燃冰调方向"
+    confidence_threshold: 0.8
+
+default_skill: ops-line
