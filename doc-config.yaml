@@ -1,16 +1,16 @@
 package_name: FinOps Toolkit
-package_description: 金融运营技能工具包 - 覆盖内容生产、活动策划、用户触达、数据分析、舆情监控、合规审查的全链路运营团队
+package_description: 金融运营技能工具包 - 7角色分工，覆盖内容生产、活动策划、产品运营、数据分析、合规审查的全链路运营团队
 target_users:
   - 互金运营从业者
   - 基金/理财运营团队
   - 金融科技公司运营岗
 
 user_readme:
-  hero_content: "互金运营全链路 Agent 团队 — 让你专注策略，把执行交给 AI"
+  hero_content: "金融运营全链路 Agent 团队 — 让你专注策略，把执行交给 AI"
   quick_start_template: |
-    1. 说"帮我写一篇基金推广文案"开始
-    2. AI 自动路由到对应技能线
-    3. 合规审查后输出最终内容
+    1. 说"帮我制定季度运营规划"开始
+    2. AI 自动分配到对应角色执行
+    3. 合规审查后输出最终方案
   trigger_guide_source: manifest.skills[*].triggers
 
 ai_readme:

@@ -1,42 +1,36 @@
-name: finops-full-cycle
-entry_skill: router
+name: finops-standard-flow
+entry_role: router
 
 stages:
   - name: route-intent
-    skill: router
-    output_var: routed-skill
+    role: router
+    output_var: routed-role
 
-  - name: load-atoms
-    skill: ops-line
+  - name: strategy-formulation
+    role: strategy-ops
     depends: [route-intent]
-    gate:
-      requires: [routed-skill]
-      blocks_if: skill-not-identified
+    output_var: strategy-result
 
-  - name: ops-execution
-    skill: ops-line
-    depends: [load-atoms]
-    output_var: ops-result
+  - name: execution
+    parallel:
+      - role: content-ops
+        depends: [strategy-formulation]
+      - role: campaign-ops
+        depends: [strategy-formulation]
+      - role: product-ops
+        depends: [strategy-formulation]
+    output_var: execution-result
 
   - name: compliance-check
-    skill: compliance-line
-    depends: [ops-execution]
+    role: compliance-ops
+    depends: [execution]
     input:
-      content: stage://ops-execution/ops-result
+      content: stage://execution/result
     output_var: compliance-result
 
-  - name: data-analysis
-    skill: data-line
+  - name: data-review
+    role: data-ops
     depends: [compliance-check]
     input:
-      context: stage://ops-execution/ops-result
+      context: stage://execution/result
     output_var: data-result
-
-  - name: final-review
-    skill: data-line
-    depends: [data-analysis]
-    input:
-      ops: stage://ops-execution/ops-result
-      compliance: stage://compliance-check/compliance-result
-      data: stage://data-analysis/data-result
-    output_var: final-result

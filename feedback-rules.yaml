@@ -6,7 +6,6 @@ negation_signals:
     - "重来"
     - "不是这个意思"
     - "不行"
-    - "重来"
   english:
     - "no"
     - "not that"
@@ -17,7 +16,7 @@ capture:
   when: negation_signal_detected
   extract:
     - user_expression
-    - routed_skill
+    - routed_role
     - previous_output
   store: data/feedback-log.jsonl
 
