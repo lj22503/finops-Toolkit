@@ -1,36 +1,34 @@
 name: finops-standard-flow
-entry_role: router
 
 stages:
   - name: route-intent
-    role: router
+    skill: router
     output_var: routed-role
 
   - name: strategy-formulation
-    role: strategy-ops
+    skill: strategy-ops
     depends: [route-intent]
     output_var: strategy-result
 
   - name: execution
     parallel:
-      - role: content-ops
-        depends: [strategy-formulation]
-      - role: campaign-ops
-        depends: [strategy-formulation]
-      - role: product-ops
-        depends: [strategy-formulation]
+      - skill: content-ops
+        input: stage://strategy-formulation/strategy-result
+      - skill: campaign-ops
+        input: stage://strategy-formulation/strategy-result
+      - skill: product-ops
+        input: stage://strategy-formulation/strategy-result
     output_var: execution-result
 
-  - name: compliance-check
-    role: compliance-ops
+  - name: compliance-review
+    skill: compliance-ops
     depends: [execution]
     input:
       content: stage://execution/result
-    output_var: compliance-result
+    gate:
+      blocks_if: compliance-failed
 
-  - name: data-review
-    role: data-ops
-    depends: [compliance-check]
-    input:
-      context: stage://execution/result
-    output_var: data-result
+  - name: data-tracking
+    skill: data-ops
+    parallel: true
+    input: stage://execution/result

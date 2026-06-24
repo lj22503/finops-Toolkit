@@ -4,20 +4,24 @@ skills:
   - name: operations-director
     triggers:
       - "定方向"
+      - "制定方向"
       - "资源分配"
       - "季度规划"
       - "年度规划"
       - "go/no-go"
+      - "决策"
     description: "运营负责人 - 制定运营整体方向、资源分配、go/no-go决策"
     confidence_threshold: 0.8
 
   - name: strategy-ops
     triggers:
       - "增长策略"
+      - "策略"
       - "用户分层"
       - "竞品分析"
       - "策略方案"
       - "A/B测试"
+      - "测试方案"
     description: "策略运营 - 将方向拆解为可执行策略"
     confidence_threshold: 0.7
 
@@ -25,8 +29,10 @@ skills:
     triggers:
       - "写文案"
       - "做内容"
+      - "内容"
       - "投教内容"
       - "多平台分发"
+      - "文章"
     description: "内容运营 - 生产金融内容，多平台适配分发"
     confidence_threshold: 0.7
 
@@ -34,25 +40,31 @@ skills:
     triggers:
       - "设计活动"
       - "活动策划"
+      - "活动"
       - "拉新活动"
       - "留存活动"
+      - "做活动"
     description: "活动运营 - 设计基金运营活动"
     confidence_threshold: 0.7
 
   - name: product-ops
     triggers:
       - "产品功能"
+      - "功能"
       - "自运营"
       - "运营工具"
       - "PRD"
+      - "产品需求"
     description: "产品运营 - 将运营需求转化为产品功能"
     confidence_threshold: 0.7
 
   - name: data-ops
     triggers:
       - "分析数据"
+      - "数据"
       - "复盘效果"
       - "数据监控"
+      - "监控"
       - "指标体系"
     description: "数据运营 - 监控数据、效果复盘、指标维护"
     confidence_threshold: 0.7
@@ -62,7 +74,9 @@ skills:
       - "检查合规"
       - "合规审查"
       - "审核内容"
+      - "合规"
       - "这个能发吗"
+      - "审一下"
     description: "合规运营 - 审查合规性，一票否决权"
     confidence_threshold: 0.9
 
