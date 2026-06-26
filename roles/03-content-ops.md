@@ -11,7 +11,8 @@ description: 内容运营（Engineer）。对应 fund-operation-workflow 1️⃣
 
 **对应6节点：** 1️⃣收集 + 4️⃣实施（文案创作/设计管理子节点）
 
-**依赖skill：** `content-strategy`、`finops-aarrr`、`content-writer`（ClawHub）、`finance-content-factory`（ClawHub）
+**依赖知识文档：** `skills/knowledge/content-long-short.md`、`skills/knowledge/aarrr-funnel.md`
+**依赖 skill：** `pm-skills/user-personas/`、`pm-skills/marketing-ideas/`
 
 ---
 

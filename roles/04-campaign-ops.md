@@ -11,7 +11,8 @@ description: 活动运营（Engineer）。对应 fund-operation-workflow 4️⃣
 
 **对应6节点：** 4️⃣实施（路径设计子节点）
 
-**依赖skill：** `campaign-design`、`finops-aarrr`、`user-lifecycle`
+**依赖知识文档：** `skills/knowledge/campaign-5w1h.md`、`skills/knowledge/aarrr-funnel.md`
+**依赖 skill：** `pm-skills/user-personas/`、`pm-skills/growth-loops/`、`pm-skills/marketing-ideas/`
 
 ---
 

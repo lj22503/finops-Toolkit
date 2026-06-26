@@ -11,7 +11,8 @@ description: 产品运营（Engineer）。对应 fund-operation-workflow 4️⃣
 
 **对应6节点：** 4️⃣实施（产品功能/工具配置子节点）
 
-**依赖skill：** `financial-product-workflow`、`campaign-design`（自运营设计部分）
+**依赖知识文档：** `skills/knowledge/campaign-5w1h.md`（自运营设计参考）、`skills/knowledge/return-first.md`
+**依赖 skill：** `pm-skills/opportunity-solution-tree/`、`pm-skills/gtm-strategy/`
 
 ---
 

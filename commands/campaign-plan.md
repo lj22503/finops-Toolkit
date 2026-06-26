@@ -19,7 +19,7 @@ argument-hint: "<活动目标> <目标人群> <产品>"
 
 ### Step 1：明确活动目标
 
-调用原子知识库中的活动运营5W1H框架：
+读取 `skills/knowledge/campaign-5w1h.md` 中的5W1H框架（Why/What/Who/When/Where/How）：
 
 - **Why**：活动目的（拉新/促活/留存/转付费）
 - **Who**：目标人群（新客/休眠户/高净值）

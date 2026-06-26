@@ -6,29 +6,26 @@ stages:
     output_var: routed-role
 
   - name: strategy-formulation
-    skill: strategy-ops
+    role: strategy-ops
     depends: [route-intent]
     output_var: strategy-result
 
   - name: execution
     parallel:
-      - skill: content-ops
+      - role: content-ops
         input: stage://strategy-formulation/strategy-result
-      - skill: campaign-ops
+      - role: campaign-ops
         input: stage://strategy-formulation/strategy-result
-      - skill: product-ops
+      - role: product-ops
         input: stage://strategy-formulation/strategy-result
     output_var: execution-result
 
   - name: compliance-review
-    skill: compliance-ops
-    depends: [execution]
-    input:
-      content: stage://execution/result
+    role: compliance-ops
     gate:
       blocks_if: compliance-failed
 
   - name: data-tracking
-    skill: data-ops
+    role: data-ops
     parallel: true
     input: stage://execution/result

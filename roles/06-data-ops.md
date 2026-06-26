@@ -11,7 +11,8 @@ description: 数据运营（QA）。对应 fund-operation-workflow 6️⃣监控
 
 **对应6节点：** 6️⃣监控 + 部分2️⃣归档（数据归档子节点）
 
-**依赖skill：** `data-metrics`、`finops-aarrr`（监测部分）、`data-analysis-skill`（ClawHub）、`operation-daily-report`（ClawHub）
+**依赖知识文档：** `skills/knowledge/data-attribution.md`、`skills/knowledge/aarrr-funnel.md`
+**依赖 skill：** `pm-skills/ab-test-analysis/`、`pm-skills/cohort-analysis/`
 
 ---
 

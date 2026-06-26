@@ -12,7 +12,8 @@ description: 策略运营（EM）。对应 fund-operation-workflow 3️⃣策略
 
 **对应6节点：** 3️⃣策略
 
-**依赖skill：** `finops-aarrr`、`user-lifecycle`、`competitor-analysis`、`a-b-test-planner`（ClawHub）
+**依赖知识文档：** `skills/knowledge/aarrr-funnel.md`、`skills/knowledge/dual-value-positioning.md`
+**依赖 skill：** `pm-skills/competitor-analysis/`、`pm-skills/user-personas/`、`pm-skills/ab-test-analysis/`、`pm-skills/opportunity-solution-tree/`、`pm-skills/gtm-strategy/`
 
 ---
 
@@ -38,10 +39,10 @@ description: 策略运营（EM）。对应 fund-operation-workflow 3️⃣策略
 
 | 交付物 | skill | 接收方 |
 |--------|-------|--------|
-| 增长策略方案 | finops-aarrr | 内容/活动/产品运营 |
-| 用户分层策略 | user-lifecycle | 内容/合规运营 |
-| 竞品分析简报 | competitor-analysis | 全团队 |
-| A/B测试方案 | a-b-test-planner | 数据运营 |
+| 增长策略方案 | `skills/knowledge/aarrr-funnel.md` | 内容/活动/产品运营 |
+| 用户分层策略 | `pm-skills/user-personas/` | 内容/合规运营 |
+| 竞品分析简报 | `pm-skills/competitor-analysis/` | 全团队 |
+| A/B测试方案 | `pm-skills/ab-test-analysis/` | 数据运营 |
 
 ## 约束
 
